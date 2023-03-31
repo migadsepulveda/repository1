@@ -5,42 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 </head>
 <style>
-    #main {
-        width: 900px;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-    #main div {flex: 1;}
-    div.centerDiv {align-self: center;}
-    body {font-family: 'Courier New', Courier, monospace; width: 900px;}
+    div.title {text-align: center; font-weight: bold; font-size: xx-large;}
+    body {font-family: 'Courier New', Courier, monospace;}
 </style>
 <body>
-    <div id = "center">
-        <h1>Ayuda animales</h1>
-        <div class="centerDiv">
-        <p>
-        Lorem ipsum dolor sit amet. Aut quam officiis sit accusamus tempora ad possimus omnis. Aut ipsam nihil qui natus sint ea dignissimos 
-        perspiciatis ut sunt accusamus est ducimus ratione.Hic maxime Quis et dolores molestiae et nihil dignissimos aut quaerat 
-        exercitationem est optio alias qui commodi inventore. 
-        Aut laborum ipsum aut nihil assumenda qui esse sunt sit minus perspiciatis sit natus dicta qui architecto odio aut ullam expedita. 
-        Aut facilis explicabo et harum consequatur quo maxime ipsam.
-        Sit nisi numquam in dolore corrupti et aperiam sapiente. 
-        Non corrupti aperiam in ipsa ipsam aut internos laborum aut placeat quam ut recusandae repudiandae ad voluptatem molestias! Qui 
-        debitis omnis vel quia delectus et aperiam molestias qui velit iste qui quia deserunt ea dolore asperiores.
-        </p>
-        </div>
-
-        <hr><h1>Nuestros clientes</h1></hr>
-        <li>Cliente 1</li>
-        <li>Cliente 2</li>
-        <li>Cliente 3</li>
-
-        <hr><h1>Secciones de ayuda</h1>></hr>
-        <img src="gato.jpg"><a href="ayudagato.html">Ayuda un gato</a>
-        <br><img src="perro.jpg"><a href="ayudaperro.html">Ayuda un perro</a></br>
+    <div class="position-relative">
+        <div class="position-absolute top-0 start-50 translate-middle-x">
+            <div class="title">Tienda de mascotas</div>
+            <p>
+            Lorem ipsum dolor sit amet. Aut quam officiis sit accusamus tempora ad possimus omnis. Aut ipsam nihil qui natus sint ea dignissimos 
+            perspiciatis ut sunt accusamus est ducimus ratione.Hic maxime Quis et dolores molestiae et nihil dignissimos aut quaerat 
+            exercitationem est optio alias qui commodi inventore. 
+            Aut laborum ipsum aut nihil assumenda qui esse sunt sit minus perspiciatis sit natus dicta qui architecto odio aut ullam expedita. 
+            Aut facilis explicabo et harum consequatur quo maxime ipsam.
+            Sit nisi numquam in dolore corrupti et aperiam sapiente. 
+            Non corrupti aperiam in ipsa ipsam aut internos laborum aut placeat quam ut recusandae repudiandae ad voluptatem molestias! Qui 
+            debitis omnis vel quia delectus et aperiam molestias qui velit iste qui quia deserunt ea dolore asperiores.
+            </p>
+    
+            <hr><div class="title">Nuestros clientes</div></hr>
+            <li>Cliente 1</li>
+            <li>Cliente 2</li>
+            <li>Cliente 3</li>
+    
+            <hr><div class="title">Secciones de ayuda</div></hr>
+            <img src="gato.jpg"><a href="ayudagato.html">Ayuda un gato</a>
+            <br><img src="perro.jpg"><a href="ayudaperro.html">Ayuda un perro</a></br></div>
     </div>
 </body>
 </html>
