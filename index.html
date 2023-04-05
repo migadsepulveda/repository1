@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</head>
+<style>
+  .title {text-align: center; font-weight: bold; font-size: xx-large;}
+  .p {text-align: justify; margin-bottom: 10px;}
+  .center {text-align: center;}
+  body {font-family: 'Courier New', Courier, monospace; margin:0%; background-color:cyan;}
+  img {width: 200px; height: 350px; transition: transform 0.2s; border: 1px solid black; margin-right: 150px;}
+  img:hover {transform: scale(1.1);}
+
+  .image {
+    flex: 0 0 50%;
+    width: 150px;
+    height: 200px;
+    margin: 10px;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text {
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+
+</style>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><b>Fundación de mascotas  </b></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="position-relative">
+      <div class="position-absolute top-0 start-50 translate-middle-x">
+          <div class="title">Bienvenido al sitio oficial de la Fundación de mascotas</div>
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" style="height: 360px;">
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2500">
+                  <img src="perro_5.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2500">
+                  <img src="gato_5.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+            </div>
+          <div class="p">
+            <div class="title">Nuestra misión</div>
+          Lorem ipsum dolor sit amet. Aut quam officiis sit accusamus tempora ad possimus omnis. Aut ipsam nihil qui natus sint ea dignissimos 
+          perspiciatis ut sunt accusamus est ducimus ratione.Hic maxime Quis et dolores molestiae et nihil dignissimos aut quaerat 
+          exercitationem est optio alias qui commodi inventore. 
+          Aut laborum ipsum aut nihil assumenda qui esse sunt sit minus perspiciatis sit natus dicta qui architecto odio aut ullam expedita. 
+          Aut facilis explicabo et harum consequatur quo maxime ipsam.
+          Sit nisi numquam in dolore corrupti et aperiam sapiente.
+          </div>
+          <div style="text-align: center;">
+            <button class="btn btn-primary" onclick="alert('¡Muchas gracias! Nos ha donado 1000 pesos.')">Donar $1.000</button>
+          </div>
+          <div class="title"><hr>Adopción de animales</hr></div>
+          <div class="center">Haga clic en cada imagen para ir a la sección de adopción respectiva.</div>
+
+          <div class="container">
+            <a href="ayudagato.html"><img class="image" src="gato.jpg"></a>
+            <div class="text">Adopción de <b>gatos</b>.</div>
+            <a href="ayudaperro.html"><img class="image" src="perro.jpg"></a>
+            <div class="text">Adopción de <b>perros</b>.</div>
+          </div>
+
+          <hr><div class="title">Fin de la página</div></hr>
+      </div>
+  </div>
+</body>
+</body>
+</html>
