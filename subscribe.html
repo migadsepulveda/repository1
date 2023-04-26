@@ -79,11 +79,11 @@
 		<div style="display: flex; justify-content: center;">
 			<form>
 				<label for="email">RUT:</label>
-				<input class="text-field" type="number" id="rut" name="rut";"><br>RUT sin puntos ni guión.<br>
+				<input class="text-field" type="number" id="rut" name="rut" placeholder="Sin puntos ni guión""><br><br>
 				<label for="name">Name:</label>
 				<input class="text-field" type="text" id="name" name="name";"><br><br>
 				<label for="name">Password:</label>
-				<input class="text-field" type="password" id="password" name="password";"><br><br>
+				<input class="text-field" type="password" id="password" name="password";" placeholder="Incluya 2 números y 2 letras mayúsculas."><br><br>
 				<label for="email">Email:</label>
 				<input class="text-field" type="email" id="email" name="email";"><br><br>
 				<label for="email">Teléfono:</label>
@@ -94,25 +94,48 @@
 				<a class="btn btn-primary" href="index.html" role="button">Volver a inicio</a>
 			</form>
 		</div>
-	
-		<script>
-			document.getElementById("signup-btn").addEventListener("click", function() {
-				var name = document.getElementById("name").value;
-				var email = document.getElementById("email").value;
-				var rut = document.getElementById("rut").value;
-				var password = document.getElementById("password").value;
-				var phone = document.getElementById("phone").value;
-				var card = document.getElementById("card").value;
-	
-				if (name === "" ||email === "" ||rut === "" ||password === "" ||phone === "" || card === "") {
-					alert("Complete los campos para poder registrarse.");
-				} else {
-					alert("Registro exitoso.");
-				}
-			});
-		</script>
-
 	</div>
 </body>
+<script>
+	document.getElementById("signup-btn").addEventListener("click", function() {
+		var name = document.getElementById("name").value;
+		var email = document.getElementById("email").value;
+		var rut = document.getElementById("rut").value;
+		var password = document.getElementById("password").value;
+		var phone = document.getElementById("phone").value;
+		var card = document.getElementById("card").value;
+
+		if (name === "" ||email === "" ||rut === "" ||password === "" ||phone === "" || card === "") {
+			alert("Complete los campos para poder registrarse.");
+		} 
+		else if (!checkPassword(password)) {
+			document.getElementById("password").value = "";
+			alert("La contraseña debe tener entre 6 y 12 caracteres y al menos 2 números y 2 letras mayúsculas. Por favor, inténtelo de nuevo.");
+		}
+		else {
+			alert("Registro exitoso.");
+		}
+	});
+
+	function checkPassword(password) {
+		var uppercaseCount = 0;
+		var numberCount = 0;
+	
+		if (password.length < 6 || password.length > 12) {
+			return false;
+		}
+	
+		for (var i = 0; i < password.length; i++) {
+			var char = password.charAt(i);
+			if (char >= "0" && char <= "9") {
+				numberCount++;
+			} else if (char >= "A" && char <= "Z") {
+				uppercaseCount++;
+			}
+		}
+	
+		return (uppercaseCount >= 2 && numberCount >= 2);
+	}
+</script>
 </html>
 
