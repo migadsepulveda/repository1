@@ -11,46 +11,14 @@
   integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 </head>
 <style>
-  .title {text-align: center; font-weight: bold; font-size: xx-large;}
-  .p {text-align: justify;}
-  .center {text-align: center;}
   body {font-family: 'Courier New', Courier, monospace; margin:0%; background-color: cyan;}
   img {height: 50px; transition: transform 0.2s; border: 1px solid black; margin: 50px;}
   img:hover {transform: scale(1.1);}
-  .row {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0 -10px;
-  }
-  .col {
-      flex: 0 0 calc(33.33% - 20px);
-      margin: 0 10px;
-      text-align: center;
-  }
-  .col img {
-      max-width: 100%;
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      margin-bottom: 10px;
-  }
-  .list {
-      list-style: none;
-      padding-left: 0;
-      margin-top: 0;
-      text-align: center;
-  }
-  .list-item {
-      text-align: center;
-      margin-bottom: 5px;
-  }
-
-  input.text-field {width: 100%;}
 </style>
 <body>
 	<nav class="navbar navbar-expand-lg bg-body-tertiary">
 	<div class="container-fluid">
-	<a class="navbar-brand" href="#"><b>Productos para Mascotas</b></a>
+	<a class="navbar-brand" href="index.html"><b>Petbuddy</b></a>
 	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	<span class="navbar-toggler-icon"></span>
 	</button>
@@ -74,24 +42,38 @@
 	</div>
 	</nav>
 
-	<div class="title">Suscripción y registro</div>
-	<div class="center"><hr>Ingrese sus datos para poder registrarse. Al suscribirse se le cobrará $2.000 automáticamente cada mes.<hr>
-		<div style="display: flex; justify-content: center;">
+	<h1 style="text-align: center; font-weight: bold; font-size: xx-large;">Suscripción y registro</h1>
+	<div style="text-align: center;"">
+		<hr>Ingrese sus datos para poder registrarse. Al suscribirse se le cobrará $2.000 automáticamente cada mes.<hr>
+	</div>
+	<div class="container col-12">
+		<div class="row">
 			<form>
-				<label for="email">RUT:</label>
-				<input class="text-field" type="number" id="rut" name="rut" placeholder="Sin puntos ni guión""><br><br>
-				<label for="name">Name:</label>
-				<input class="text-field" type="text" id="name" name="name";"><br><br>
-				<label for="name">Password:</label>
-				<input class="text-field" type="password" id="password" name="password";" placeholder="Incluya 2 números y 2 letras mayúsculas."><br><br>
-				<label for="email">Email:</label>
-				<input class="text-field" type="email" id="email" name="email";"><br><br>
-				<label for="email">Teléfono:</label>
-				<input class="text-field" type="number" id="phone" name="phone";"><br><br>
-				<label for="email">Nro de tarjeta:</label>
-				<input class="text-field" type="number" id="card" name="card";"><br><br>
-				<button type="button" id="signup-btn" class="btn btn-primary">Suscribirse y registrarse</button>
-				<a class="btn btn-primary" href="index.html" role="button">Volver a inicio</a>
+				<div class="form-group col-12 col-md-8 col-lg-4">
+					<label for="input1">Nombre y Apellido</label>
+					<input type="text" class="form-control" id="name" placeholder="">
+				</div>
+				<div class="form-group col-12 col-md-8 col-lg-4">
+					<label for="input2">RUT</label>
+					<input type="text" class="form-control col-6" id="rut" placeholder="Ingrese su RUT sin puntos ni guión">
+				</div>
+				<div class="form-group col-12 col-md-8 col-lg-4">
+					<label for="input3">Teléfono</label>
+					<input type="text" class="form-control" id="phone" placeholder="">
+				</div>
+				<div class="form-group col-12 col-md-8 col-lg-4">
+					<label for="input3">Email</label>
+					<input type="text" class="form-control" id="email" placeholder="">
+				</div>
+				<div class="form-group col-12 col-md-8 col-lg-4">
+					<label for="input3">Contraseña</label>
+					<input type="password" class="form-control" id="password" placeholder="">
+				</div>
+				<div class="form-group col-12 col-md-8 col-lg-4">
+					<label for="input3">Confirmación de contraseña</label>
+					<input type="password" class="form-control" id="pass_val" placeholder="Repita su contraseña por seguridad">
+				</div>
+				<br><button type="submit" class="btn btn-primary" id="signup-btn">Submit</button>
 			</form>
 		</div>
 	</div>
@@ -102,15 +84,15 @@
 		var email = document.getElementById("email").value;
 		var rut = document.getElementById("rut").value;
 		var password = document.getElementById("password").value;
+		var pass_val = document.getElementById("pass_val").value;
 		var phone = document.getElementById("phone").value;
-		var card = document.getElementById("card").value;
 
-		if (name === "" ||email === "" ||rut === "" ||password === "" ||phone === "" || card === "") {
+		if (name === "" ||email === "" ||rut === "" ||password === "" ||phone === "") {
 			alert("Complete los campos para poder registrarse.");
 		} 
 		else if (!checkPassword(password)) {
 			document.getElementById("password").value = "";
-			alert("La contraseña debe tener entre 6 y 12 caracteres y al menos 2 números y 2 letras mayúsculas. Por favor, inténtelo de nuevo.");
+			alert("La contraseña debe tener más de 6 y al menos 2 números y 2 letras mayúsculas. Por favor, inténtelo de nuevo.");
 		}
 		else {
 			alert("Registro exitoso.");
@@ -121,7 +103,7 @@
 		var uppercaseCount = 0;
 		var numberCount = 0;
 	
-		if (password.length < 6 || password.length > 12) {
+		if (password.length < 6) {
 			return false;
 		}
 	
