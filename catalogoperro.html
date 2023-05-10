@@ -9,25 +9,10 @@
   integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" 
   integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-  <script>
-  function displayDialogue() {
-    alert("Producto agregado al carrito.");
-  }
-
-  window.onload = function() {
-    var images = document.getElementsByTagName("img");
-    for (var i = 0; i < images.length; i++) {
-      images[i].onclick = displayDialogue;
-    }
-  }
-  </script>
 </head>
 <style>
-  .title {text-align: center; font-weight: bold; font-size: xx-large;}
-  .p {text-align: justify;}
-  .center {text-align: center;}
   body {font-family: 'Courier New', Courier, monospace; margin:0%; background-color:cyan;}
-  img {height: 50px; transition: transform 0.2s; border: 1px solid black; margin: 50px;}
+  img {height: 50px; transition: transform 0.2s; border: 1px solid black; margin: 10px;}
   img:hover {transform: scale(1.1);}
 
   .row {
@@ -61,7 +46,7 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><b>Petbuddy</b></a>
+      <a class="navbar-brand" href="index.html"><b>Petbuddy</b></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -85,22 +70,25 @@
     </div>
   </nav>
 
-  <div class="title">Productos para Perros</div>
-  <hr><div class="center">Presione el producto para incluirlo en su Carro de Compras.</hr>
-
+  <h1>Productos para Perros</h1>
+  <hr><div style="text-align: center;">Presione el producto para incluirlo en su Carro de Compras.</hr></div>
+  <div class="container col-12">
   <div class="row">
-    <div class="col">
-        <img src="collar-perro-poliuretano.jpg" alt="Image 1">
-        <ul class="list">
-          <h1>Collar para perro</h1>
-          <li class="list-item"><h1>$1.990</h1></li>
-          <li class="list-item">Material: Poliuretano.</li>
-          <li class="list-item">Color: Rojo, Amarillo, Gris.</li>
-          <li class="list-item">Ajustable: Si.</li>
-        </ul>
+    <div class="col-sm-12 col-md-4 col-lg-4">
+      <figure class="figure">
+        <picture>
+          <img src="collar-perro-poliuretano.jpg" class="rounded mx-auto d-block w-50 h-50" alt="...">
+          <ul class="list">
+            <h1>Collar para perro</h1>
+            <li class="list-item"><h1>$1.990</h1></li>
+            <li class="list-item">Material: Vinil.</li>
+            <li class="list-item">Color: Naranja, Amarillo, Rojo.</li>
+            <li class="list-item">Resistencia: Hasta cuatro años.</li>
+          </ul>
+      </figure>
     </div>
-    <div class="col">
-        <img src="juguete-perro-vinil.jpg" alt="Image 2">
+    <div class="col-sm-12 col-md-4 col-lg-4">
+        <img src="juguete-perro-vinil.jpg" class="rounded mx-auto d-block w-50 h-50" alt="...">
         <ul class="list">
           <h1>Juguete para perro</h1>
           <li class="list-item"><h1>$4.990</h1></li>
@@ -109,8 +97,8 @@
           <li class="list-item">Resistencia: Hasta cuatro años.</li>
         </ul>
     </div>
-    <div class="col">
-        <img src="cama-perro-algodón.jpg" alt="Image 3">
+    <div class="col-sm-12 col-md-4 col-lg-4">
+        <img src="cama-perro-algodón.jpg" class="rounded mx-auto d-block w-50 h-50" alt="...">
         <ul class="list">
           <h1>Cama para perro</h1>
           <li class="list-item"><h1>$8.990</h1></li>
@@ -118,8 +106,22 @@
           <li class="list-item">Color: Rojo, Marrón, Gris.</li>
           <li class="list-item">Accesorios adicionales: Almohadilla.</li>
         </ul>
+      </div>
     </div>
   </div>
-  <a class="btn btn-primary" href="index.html" role="button">Volver</a>
+  <div class="text-center">
+  <br><a class="btn btn-primary" href="index.html" role="button">Volver</a></div>
 </body>
+<script>
+  function displayDialogue() {
+    alert("Producto agregado al carrito.");
+  }
+
+  window.onload = function() {
+    var images = document.getElementsByTagName("img");
+    for (var i = 0; i < images.length; i++) {
+      images[i].onclick = displayDialogue;
+    }
+  }
+</script>
 </html>
