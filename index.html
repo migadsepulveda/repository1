@@ -12,9 +12,10 @@
   integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 </head>
 <style>
-  body {font-family: 'Courier New', Courier, monospace; margin:0%; background-color:rgb(238, 226, 121);}
-  img {width: 200px; height: 350px; transition: transform 0.2s; border: 1px solid black; margin-right: 150px;}
-  img:hover {transform: scale(1.1);}
+  body {font-family: 'Courier New', Courier, monospace; margin:0%; background-color:rgb(255, 255, 255);}
+  img {width: 200px; height: 350px; transition: transform 0.2s; border: 10px solid rgb(255, 0, 0); margin-right: 150px; border-radius: 10px;}
+  .card {border: 10px solid rgb(255, 0, 0); transition: transform 0.2s; width: 200px; height: 350px;}
+  .card:hover {transform: scale(1.1);}
 
   .image {
     flex: 0 0 50%;
@@ -37,15 +38,20 @@
     margin-top: 10px;
   }
 
-  /*.carousel {
-    margin:0 auto;
-  }*/
+  .navbar {
+    background-color: red;
+  }
 
+  @media (max-width: 768px) {
+    div {
+      padding: 5px;
+    }
+  }
 </style>
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><b>Petbuddy</b></a>
+      <a class="navbar-brand text-red" href="index.html";"><b style="border:2px #FFC107;">Petbuddy</b></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -70,7 +76,7 @@
   </nav>
 
   <h1 style="text-align: center; font-weight:bold">Bienvenido a la tienda oficial de <br>Petbuddy<br></h1>
-  <div class="container col-sm-12 col-lg-4">
+  <div class="container col-sm-12 col-lg-5">
     <div class="row">
       <div class="d-flex justify-content-center">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -86,25 +92,38 @@
       </div>
     </div>
   </div>
-  <div class="container col-12">
+  <br><div class="container col-12">
     <div class="row">
       <div>
-        <br>Lorem ipsum dolor sit amet. Aut quam officiis sit accusamus tempora ad possimus omnis. Aut ipsam nihil qui natus sint ea dignissimos 
-        perspiciatis ut sunt accusamus est ducimus ratione.Hic maxime Quis et dolores molestiae et nihil dignissimos aut quaerat 
-        exercitationem est optio alias qui commodi inventore.
-        Nuestra tienda recauda fondos para una fundación de animeles mediante suscripciones. Al suscribirse, ustes no solo ayuda a la fundación, 
-        sino que además tendrá acceso a <b>descuentos y más beneficios</b>. Para suscribirse, haga clic en el botón abajo.<br> 
-        <div class="text-center">
-        <br><a class="btn btn-primary" href="subscribe.html" role="button">Suscribirse</a></div>
-        <h1><hr>Nuestros catálogos</hr></h1>
-        <div class="center">Seleccione el perro o el gato para ver su catálogo respectivo.</div>
+        <div style="background-color: #FFC107; padding: 10px; border-radius: 20px">
+          <p>Lorem ipsum dolor sit amet. Aut quam officiis sit accusamus tempora ad possimus omnis. Aut ipsam nihil qui natus sint ea dignissimos 
+            perspiciatis ut sunt accusamus est ducimus ratione.
+            <br><br>Nuestra tienda recauda fondos para una fundación de animeles mediante suscripciones. Al suscribirse, ustes no solo ayuda a la fundación, 
+            sino que además tendrá acceso a <b>descuentos y más beneficios</b>. Para suscribirse, haga clic en el botón abajo.<br></p>
+            <div class="text-center">
+              <a class="btn btn-primary" href="subscribe.html" role="button">Suscribirse</a></div>
+          </div>
+        <h1 style="text-align: center; font-weight: bold"><hr>Nuestros catálogos</h1>
+        <div style="text-align: center;">Seleccione el perro o el gato para ver su catálogo respectivo.</div>
         <div class="container">
-          <a href="catalogogato.html"><img class="image" src="gato.jpg"></a>
-          <div class="text">Productos de <b>gatos</b>.</div>
-          <a href="catalogoperro.html"><img class="image" src="perro.jpg"></a>
-          <div class="text">Productos de <b>perros</b>.</div>
+          <a href="catalogogato.html" style="padding: 20px;">
+            <div class="card" style="width: 13rem; height: 18rem">
+            <img src="gato.jpg" class="card-img-top" alt="..." style="width: 180px; height: 205px; border: 0px">
+            <div class="card-body">
+              <h1 class="card-text" style="text-align: center; font-weight: bold;">GATOS</h1>
+            </div>
+            </div>
+          </a>
+          <a href="catalogoperro.html" style="padding: 20px;">
+            <div class="card" style="width: 13rem; height: 18rem">
+            <img src="perro.jpg" class="card-img-top" alt="..." style="width: 180px; border: 0px">
+            <div class="card-body">
+              <h1 class="card-text" style="text-align: center; font-weight: bold;">PERROS</h1>
+            </div>
+            </div>
+          </a>  
         </div>
-        <hr><h1>¿Por qué es un sitio web?</h1>
+        <h1 style="text-align: center; font-weight: bold"><hr>¿Por qué es un sitio web?</h1>
         <div class="center">Un grupo de amigas comenzó un tiempo atrás a realizar la venta de productos para mascotas, esto
           con el fin de aportar a una fundación sin fines de lucro mediante redes sociales. Dado al control ofrecido por las
           redes sociales en la demanda de productos, ellas decidieron empezar por este medio.
