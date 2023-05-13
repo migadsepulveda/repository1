@@ -27,50 +27,47 @@
       </button>
       <table class="table table-dark table-striped">
         <thead>
-          <th>#</th>
-          <th>Name</th>
-          <th>Image</th>
-          <th>Description</th>
+          <th>Inserte los datos correspondientes al envío de su compra:</th>
         </thead>
         <tbody id="tbody"></tbody>
       </table>
-      <label for="cboRegiones">Región</label>
-      <select
-        name="cboRegiones"
-        id="cboRegiones"
-        class="form-select mb-3 col-md-4">
-        <option value="0" disable hidden>Seleccione una región</option>
-        <option value="1">Arica y Parinacota</option>
-        <option value="2">Tarapacá</option>
-        <option value="3">Antofagasta</option>
-        <option value="4">Atacama</option>
-        <option value="5">Coquimbo</option>
-        <option value="6">Valparaiso</option>
-        <option value="7">Metropolitana</option>
-        <option value="8">O'Higgins</option>
-        <option value="9">Maule</option>
-        <option value="10">Ñuble</option>
-        <option value="11">Biobío</option>
-        <option value="12">Araucanía</option>
-        <option value="13">Los Ríos</option>
-        <option value="14">Los Lagos</option>
-        <option value="15">Aysén</option>
-        <option value="16">Magallanes</option>
-      </select>
-
-      <label for="cboComunas">Comunas</label>
-      <select
-        name="cboComunas"
-        id="cboComunas"
-        class="form-select mb-3 col-md-4" disabled>
-        <option value="0" disable hidden>Seleccione una comuna</option>
-      </select>
-
-    </div>
-  </div>
-</body>
-<script crossorigin="anonymous" src="js/function.js">
+      <form>
+        <div class="mb-3 col-md-4">
+          <label for="cboRegiones" class="form-label">Región</label>
+          <select
+          name="cboRegiones"
+          id="cboRegiones"
+          class="form-select" required>
+          <option selected disabled value>Seleccione una región</option>
+          <option>Arica y Parinacota</option>
+          <option>Tarapacá</option>
+          <option>Antofagasta</option>
+          <option>Atacama</option>
+          <option>Coquimbo</option>
+          <option>Valparaiso</option>
+          <option>Metropolitana</option>
+          <option>O'Higgins</option>
+          <option>Maule</option>
+          <option>Ñuble</option>
+          <option>Biobío</option>
+          <option>Araucanía</option>
+          <option>Los Ríos</option>
+          <option>Los Lagos</option>
+          <option>Aysén</option>
+          <option>Magallanes</option>
+        </select>
+      </div>
   
-</script>
-
-</html>
+      <div class="mb-3 col-md-4">
+        <label for="cboComunas" class="form-label">Comuna</label>
+        <input type="text" class="form-control" id="cboComunas" required>
+      </div>
+  
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Confirmar</button>
+      </div>
+    </form>
+  </body>
+  <script crossorigin="anonymous" src="js/function.js">
+  </script>
+  </html>
